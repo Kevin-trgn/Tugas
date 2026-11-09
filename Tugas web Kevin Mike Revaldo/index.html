@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kenang-Kenangan</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        .kontainer{
+            border: 2px solid #8d6e63;
+            width: 70%; 
+            max-width: 1000px; 
+            min-height: 100vh; 
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #fdfbf7;
+        }
+        
+        .header{
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #41676d;
+            color: white;
+        }
+        
+        .isi{
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row; 
+        }
+        
+        .kiri img{
+            width: 100%;
+        }
+        .kiri{
+            width: 30%;
+            overflow-y: auto;
+            height: 90%;
+        }
+        
+
+        .kanan{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .kanan1{
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 2px solid #d7ccc8;
+        }
+        
+        .kanan2{
+            width: 100%;
+            padding: 20px;
+            background-color: #fafafa;
+            flex-grow: 1;
+        }
+        
+        .footer{
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background-color: #3e2723;
+            color: white;
+        }
+
+        .daftar-album {
+            list-style-type: none;
+            padding: 0;
+            font-weight: bold;
+            color:gray;
+        }
+        .daftar-album li {
+            padding: 10px 0;
+            border-bottom: 1px solid #d7ccc8;
+        }
+        .daftar-album li a {
+            text-decoration: none;
+            color: #5d4037;
+            font-weight: bold;
+        }
+        .daftar-album li a:hover {
+            color: #d84315;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .kumpulan-foto {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .kumpulan-foto img {
+            width: calc(33% - 10px);
+            min-width: 120px;
+            object-fit: cover;
+        }
+        @media screen and (max-width: 992px) {
+            .kontainer {
+                width: 95%; 
+            }
+            .kiri {
+                width: 35%; 
+            }
+            .kanan {
+                width: 65%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .isi {
+                flex-direction: column; 
+            }
+            .kiri {
+                width: 100%; 
+                border-right: none; 
+                border-bottom: 2px solid #d7ccc8; 
+            }
+            .kanan {
+                width: 100%; 
+            }
+            .kumpulan-foto img {
+                width: 45%;
+                
+            }
+            .kumpulan-foto{
+                justify-content: space-evenly;
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <div class="header">
+            <h1 style="margin: 0;">Galeri Kenang-Kenangan</h1>
+            <p style="margin: 5px 0 0 0;">Kevin Galery</p>
+        </div>
+        
+        <div class="isi">
+            <div class="kiri">
+                <h3>Koleksi Album</h3>
+                <ul class="daftar-album">
+                    <li>1. Family 90-an</li>
+                    <img src="gambar/80an.jpeg">
+                    <li>2. Kumpul Bareng Teman</li>
+                    <img src="gambar/dantob.jpeg">
+                    <li>3. Takewondo</li>
+                    <img src="gambar/tkdbengku.jpeg">
+                    <li>4. Trip Kutalimbaru</li>
+                    <img src="gambar/tripsungai.jpeg">
+                </ul>
+            </div>
+            
+            <div class="kanan">
+                <div class="kanan1">
+                    <h2 style="margin-top: 0;">Momen Pilihan</h2>
+                    <p><i>Kenangan kelas 12MIA1 pada tahun 2024 di SMA Negeri 1 Pancur Batu.</i></p>
+                    <img src="gambar/SM.jpeg" alt="Foto Utama">
+                    <p><i>Momen sehabis pertandingan futsal pada event porseni tahun 2024 di sekolah SMA Negeri 1 Pancur Batu.</i></p>
+                </div>
+                
+                <div class="kanan2">
+                    <h2 style="margin-top: 0;">Foto Lainnya</h2>
+                    <div class="kumpulan-foto">
+                        <img src="gambar/v.jpeg">
+                        <img src="gambar/KH.jpeg">
+                        <img src="gambar/TKD.jpeg">
+                        <img src="gambar/TKD2.jpeg">
+                        <img src="gambar/tk.jpeg">
+                        <img src="gambar/Skuning.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2026 Galeri Kenangan Kevin.
+        </div>
+    </div>
+</body>
+</html>
